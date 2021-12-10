@@ -1,0 +1,35 @@
+.tooltip-container{
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+}
+.tooltip-container.active .alert {
+    display: none;
+}
+.tooltip-container.active .close {
+    display: block;
+}
+.tooltip-container.active .info-container{
+    transform: scale(1);
+}
+.info-container{
+    position: absolute;
+    bottom: 125%;
+    z-index: 9;
+    width:300px;
+    background: white;
+    box-shadow:5px 5px 10px rgba(0,0,0.1);
+    font-size: 0.8em;
+    border-radius: 0.5em;
+    padding: 1em;
+    transform:scale(0);
+    transform-origin: bottom left;
+    transition: transform .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.close {
+    display:none;
+}
+svg{
+    width: 1em;
+    cursor:pointer;
+}
